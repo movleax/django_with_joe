@@ -29,12 +29,13 @@ def highscores(request):
     
     id = request.session['id']#request.GET['userid']
 
-    gamesList = Games.objects.all()
+    # gamesList = Games.objects.all()
+    # gamesList.
+    # for game in gameList:
 
-    for game in gameList:
-        
-
-    return render(request, "highscores.html")
+    scoresList = Scores.objects.all()#.filter(games_id=id)
+    print(scoresList)
+    return render(request, "highscores.html", {'data': scoresList })
 
 def login(request):
     if(request.method == "GET"):
