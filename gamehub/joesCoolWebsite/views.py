@@ -24,6 +24,18 @@ def index(request):
 def register(request):
     return render(request, "register.html")
 
+def highscores(request):
+
+    
+    id = request.session['id']#request.GET['userid']
+
+    gamesList = Games.objects.all()
+
+    for game in gameList:
+        
+
+    return render(request, "highscores.html")
+
 def login(request):
     if(request.method == "GET"):
         return render(request, "login.html")
