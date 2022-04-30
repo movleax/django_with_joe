@@ -4,4 +4,10 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("this is the equivalent of @app.routes('/')")
+    context = {
+        "name": "austin",
+        "favorite_color": "red",
+        "pets": ["tonail", "gabe", "Sir Squash"]
+    }
+    return render(request, "index.html", context)
+    #return HttpResponse("this is the equivalent of @app.routes('/')")
