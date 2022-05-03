@@ -1,1 +1,0 @@
-# django_with_joe
