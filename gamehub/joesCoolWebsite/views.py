@@ -35,7 +35,27 @@ def highscores(request):
 
     scoresList = Scores.objects.all()#.filter(games_id=id)
     print(scoresList)
-    return render(request, "highscores.html", {'data': scoresList })
+
+    scoresViewModelDict = {}
+
+    for score in scoresList:
+        gameName = score.games_id.name
+
+        scoreVm = ScoresViewModel()
+        scoreVm.gameName = gameName
+        scoreVm.userName = score.users_id.firstName
+        scoreVm.score = score.score
+        scoreVm.timestamp = score.timestamp
+
+
+        scoresViewModelDict.setdefault(gameName, []).append(scoreVm)
+    
+    for key, value in scoresViewModelDict.items():
+        print(key, value)
+    
+    #print(scoresViewModelDict)
+
+    return render(request, "highscores.html", {'Model': scoresViewModelDict })
 
 def login(request):
     if(request.method == "GET"):

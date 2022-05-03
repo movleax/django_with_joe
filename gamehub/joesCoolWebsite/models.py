@@ -1,3 +1,4 @@
+from xmlrpc.client import DateTime
 from django.db import models
 
 # Create your models here.
@@ -19,3 +20,9 @@ class Scores(models.Model):
     users_id = models.ForeignKey(Users, on_delete=models.CASCADE)
     score = models.IntegerField()
     timestamp = models.DateTimeField(auto_now=True)
+
+class ScoresViewModel():
+    gameName: str
+    userName: str
+    score: int
+    timestamp: DateTime
