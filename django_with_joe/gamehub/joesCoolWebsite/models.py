@@ -24,4 +24,4 @@ class ScoresViewModel():
     gameName: str
     userName: str
     score: int
-    timestamp: DateTime
+    timestamp: str
