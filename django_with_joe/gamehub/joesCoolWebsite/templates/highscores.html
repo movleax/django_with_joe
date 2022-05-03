@@ -1,29 +1,34 @@
-{{data.first.games_id.name}}
-<table>
-    <th>
-        <tr>
-            <td>
-                Name
-            </td>
-            <td>
+
+   
+   {% for key, value in Model.items%}
+   {{key}}
+   <table>
+       <tr>
+           <th>
+               Name
+           </td>
+            <th>
                 Score
-            </td>
-        </tr>
-    </th>
-    <tbody>
-        {% for score in data %}
+            </th>
+            <th>
+                TimeStamp
+            </th>
+       </tr>
+        {% for score in value %}
         <tr>
             <td>
-                {{score.users_id.firstName}}
+                {{score.userName}}
             </td>
             <td>
                 {{score.score}}
             </td>
+            <td>
+                {{score.timestamp}}
+            </td>
         </tr>
         {% endfor %}
-    </tbody>
-</table>
-
+   </table>
+   {% endfor %}
 
 <div>
     <a href="/">index</a>
