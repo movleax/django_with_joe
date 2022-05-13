@@ -4,10 +4,13 @@ const time = document.querySelector('#timeLeft')
 const score = document.querySelector('#score')
 const button = document.querySelector('.start')
 
+
+
 let result = 0
 let hitPosition
 let currentTime = 10
 let timerId = null
+let countDownTimerId
 
 var startGame = document.getElementById(startGame);
 
@@ -29,6 +32,8 @@ squares.forEach(square => {
         if (square.id == hitPosition) {
             result++
             score.textContent = result
+            var tester = document.querySelector("#test")
+            tester.setAttribute("value", result)
             hitPosition = null
         }
     })
@@ -40,43 +45,76 @@ function moveMole(){
 }
 
 
+// function countDown(){
+//     currentTime--
+//     tim
+// }
 
-function countDown() {
-    currentTime--
-    time.textContent = currentTime
-    
-    if (Math.floor(currentTime) === 0){
-        clearInterval(countDownTimerId)
-        clearInterval(timerId)
-        alert('GAME OVER your score is ' + result)
-    }
-}
-// let countDownTimerId = setInterval()
+
+// function countDown(timer) {
+    // if (timer <= 0) {
+    //     clearInterval(countDownTimerId);
+    //     clearInterval(timer);
+    //     return
+    // }
+//     timer--
+// }
+
 
 function StartGame() {
+    console.log("this is the timeinner" + time.innerHTML)
     console.log("beginning function")
-    if (currentTime == 10){
+    let count = time.innerHTML
+    if (count > 0){
         moveMole()
-        countDownTimerId = setInterval(countDown, 1000)
-        console.log("end function")
+        countDownTimerId = setInterval(function(){
+            count--;
+            time.innerHTML--;
+            if (count == 0){
+                clearInterval(countDownTimerId)
+                clearInterval(timerId)
+                return
+            } 
+        }, 1000)
+
+        console.log(count)
+
+
+    
+    if (count === 0){
+        clearInterval(countDownTimerId)
+        clearInterval(time.innerHTML)
     }
+    }
+    console.log("this is ther html" + time.innerHTML)
     }
 
 
 function Restart(){
     console.log("Printed")
-    if (currentTime == 0){
-        clearInterval(countDownTimerId)
-        clearInterval(timerId)
-    console.log(timerId)
+    // if (currentTime == 0){
+    //     clearInterval(countDownTimerId)
+    //     clearInterval(timerId)
+    document.getElementById('score').innerHTML = 0
+    // console.log(timerId)
+    button.addEventListener('start',startGame)
     }
-}
-button.addEventListener('start',startGame)
+// }
 
 function EndGame(){
     console.log("hey this is good")
-    if (currentTime == 0){
-        
-    }
+    clearInterval
 }
 // sessionStorage.removeItem('mole')
+
+var data = {
+    'gamescore':{
+        "score" : result
+    }
+}
+
+console.log(typeof(data))
+console.log(Array.isArray(data))
+console.log(Array.isArray(data.gamescore))
+
+console.log(data[gamescore][0].score)

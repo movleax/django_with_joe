@@ -1,5 +1,5 @@
 
-
+/* this is the styling for wackamole game */
 .grid{
     width: 40%;
     height: 50%;
@@ -11,18 +11,18 @@
 .square{
     width: 33%;
     height: 33%;
-    border:solid black 0.5px;
+    border:solid white 0.5px;
 }
 
 .mole {
-    background-color: blue;
+    background-color: green;
 }
 
 .return{
 
     text-decoration: none;
     color: red;
-    border: 2px black groove;
+    border: 2px white groove;
 }
 
 .return:visited {
@@ -34,3 +34,36 @@
     width: 100vw;
     height: 100vh;
 }
+
+/* styling for the highscores */
+.highscorelist{
+    background-color: teal;
+    display: flex;
+    justify-content: space-around;
+}
+.header{
+    display: block !important ;
+    align-items: center;
+}
+.tables{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+/* universal styles */
+body {
+    background-color: black !important;
+    color: red !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* login styles */
+
+.logsform{
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
