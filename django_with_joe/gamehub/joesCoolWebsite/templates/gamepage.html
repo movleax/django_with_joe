@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-    
-    {% for game in games %}
-    <div><a href="/playgame/{{game.id}}">click to play {{game.name}} <a href="/addfavgame/{{game.id}}">add to favorites</a></a></div>
-    {% endfor %}
-{% endblock %}

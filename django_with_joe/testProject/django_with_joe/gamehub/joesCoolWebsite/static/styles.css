@@ -1,0 +1,223 @@
+/* universal styles */
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('./images/forestbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: black !important; */
+    /* background-color: blue !important; */
+    color: red ;
+    /* display: flex; */
+    align-items: center !important;
+    /* margin-left: auto !important;
+    margin-right: auto !important; */
+    /* margin: 10px 4px 10px 4px !important; */
+}
+
+/* header styling */
+
+.navstuff{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    /* border: 3px white dashed; */
+}
+
+.links>div{
+    margin: 4px;
+    border: 3px white groove;
+}
+
+
+/* login styles */
+
+.loginfull{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% auto;
+    /* border: 2px purple dashed; */
+    width: 50vw;
+    height: 50vh;
+    background-color: transparent;
+}
+
+.loginfull h1{
+    margin-top: 7%;
+}
+
+.logsform{
+    width: 30%;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+/* index-dashboard styles */
+
+.gamecoms{
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    justify-content: space-around;
+    /* background-color: blue; */
+}
+
+/* .favcolumn{
+    background-color: rgb(147, 212, 154);
+}
+
+.comments{
+    background-color: orangered;
+} */
+
+/* styling for the highscores */
+.highscorelist{
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.background h1{
+    margin: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.header{
+    display: block  ;
+    align-items: center;
+}
+.tables{
+    display:flex;
+    flex-wrap: wrap;
+    color: rgb(215, 223, 8);
+}
+
+.background h1{
+    align-items: center;
+}
+
+/* gamepage */
+
+.container2{
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: auto;
+    /* flex-direction: column; */
+    justify-content: space-around;
+}
+
+.Gamecon{
+    margin: 5px;
+}
+.gamelist{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.GF1{
+    border: blue 5px groove;
+    margin: 2px;
+    
+
+}
+
+.G1{
+    color: red
+}
+.F1{
+    color: green;
+    size: 2px;
+
+}
+
+
+.wackycomments{
+    display: flex;
+    /* align-items: center; */
+
+}
+
+.CHG{
+    margin: 5px;
+    width: 25%;
+    margin-left: 600px;
+}
+.CG{
+    height: 500px;
+    /* width: 50%; */
+    overflow: default;
+    background-color: black;
+    color: white;
+    padding: 8px;
+
+}
+
+.CBM>.comments{
+background-color: aqua;
+align-items: center;
+width: 50%;
+
+}
+
+
+
+
+/* this is the styling for wackamole game */
+.grid{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 4px turquoise groove; */
+}
+
+.square{
+    width: 33%;
+    height: 33%;
+    border:solid white 0.5px;
+}
+
+.mole {
+    background-color: green;
+}
+
+.return{
+    
+    text-decoration: none;
+    color: red;
+    border: 2px white groove;
+}
+
+.return:visited {
+    text-decoration: none;
+    color: red;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.wackygame{
+    width: 50%;
+}
+
+/* tester */
+
+
+div {
+    overflow-x: hidden;
+    overflow-y: auto;
+}

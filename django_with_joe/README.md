@@ -1,1 +1,1 @@
-# django_with_joe
+# Projects
